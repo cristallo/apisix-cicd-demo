@@ -16,9 +16,9 @@ jobs:
       # Demo only: plaintext values for simplicity. Do NOT use in production.
       # Set this to your public VM address so GitHub Actions can reach APISIX Admin API.
       # In Production environments, use secrets to inject these values securely.
-      APISIX_ADMIN_API: "http://68.183.178.88:9180"
+      APISIX_ADMIN_API: ${{ secrets.APISIX_ADMIN_API }}
       # Demo admin key; replace if you change APISIX admin_key in config.
-      APISIX_ADMIN_KEY: "edd1c9f034335f136f87ad84b625c8f1"
+      APISIX_ADMIN_KEY: ${{ secrets.APISIX_ADMIN_KEY }}
       ADC_VERSION: "0.21.2"
     steps:
       - name: Checkout
